@@ -1,0 +1,149 @@
+/* Modal Background */
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Darker background for better contrast */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Modal Container */
+.modalContainer {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  background-color: #ffffff; /* Clean white background */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px; /* Softer shadow */
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  overflow: hidden; /* Prevent content overflow */
+  position: relative; /* To position close button */
+}
+
+/* Title Section */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333; /* Darker text for better readability */
+}
+
+/* Close Button */
+.titleCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #666; /* Subtle color */
+  cursor: pointer;
+}
+
+.titleCloseBtn button:hover {
+  color: #333; /* Darker color on hover */
+}
+
+/* Modal Body */
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #555; /* Slightly lighter text color */
+}
+
+.address {
+  height: 35px;
+  width: 100%;
+  max-width: 330px;
+  padding: 0 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.address:focus {
+  border-color: cornflowerblue; /* Highlight border on focus */
+  background-color: #f0f8ff; /* Light blue background on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Select Dropdown */
+#selectNumber {
+  width: 100%;
+  max-width: 330px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Footer Section */
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer button {
+  width: 120px;
+  height: 40px;
+  margin: 0 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer button:hover {
+  background-color: royalblue;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+#cancelBtn {
+  background-color: crimson;
+}
+
+#cancelBtn:hover {
+  background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modalContainer {
+    width: 95%;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .footer button {
+    width: 100px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .address {
+    max-width: 90%;
+  }
+}
+
+
+
+
